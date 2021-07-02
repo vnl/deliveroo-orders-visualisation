@@ -28,7 +28,7 @@ def get_deliveroo_orders(orders):
 
     soup = BeautifulSoup(html, 'html.parser')
 
-    order_history = soup.find("div", {"class": "user user--history mbottom30"})
+    order_history = soup.find("div", {"class": "OrderList-59914cb140343df2"})
 
     order_entry = order_history.findAll("li")
 
