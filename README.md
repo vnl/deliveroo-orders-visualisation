@@ -28,21 +28,28 @@ Analysing all the food orders [Deliveroo](https://deliveroo.co.uk/)
 * Use this [little tool](https://curl.trillworks.com/) to get the python code
 
 * Use the cookies obtained from above in your code
+* Now on the page click on "View More" 
+* The network tab now loads 2 new requests called 'order' with limit and offset. 
+* Click the above request to get the API url - ...api.uk.deliveroo.com/orderapp/v1/users/{UserNumber}/orders?limit...
+  * Ex: Request URL: https://api.uk.deliveroo.com/orderapp/v1/users/123456789/orders?limit=26&offset=25
+* Copy this 'UserNumber'
 
 
-## Note
 
-For storing your cookies - 
-
-
-### get_deliveroo_orders.py
+## Add the following:
 
 
-For this script, update the below code snippet in the script with your own cookies.
+Update the below code snippet in the script with your own values for cookies and User Number.
 
 ```python
     cookies = {
                     'cookie': 'your cookies here',
+    }
+```
+
+```python
+    user = {
+                    'user': 'your user number here',
     }
 ```
 
