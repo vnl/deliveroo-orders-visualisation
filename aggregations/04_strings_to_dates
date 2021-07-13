@@ -1,0 +1,22 @@
+[{$addFields: {
+  submitted_at: {
+    $convert: {
+      input: "$submitted_at",
+      to: "date"
+    }
+  },
+  estimated_delivery_at: {
+    $convert: {
+      input: "$estimated_delivery_at",
+      to: "date"
+    }
+  },
+  status_timestamp: {
+    $convert: {
+      input: "$status_timestamp",
+      to: "date"
+    }
+  }
+}}, {$merge: {
+  into: 'orders_peter'
+}}]
